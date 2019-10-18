@@ -4,7 +4,11 @@ const handleSearch = event => {
   console.log("user input", inputField.value)
 
   searchRecipes(inputField.value)
-  .then(response => console.log(response))
+  .then(response => {
+    // console.log(response.recipes)
+    displayRecipeHtml(response.recipes)
+    inputField.value = ""
+  })
 }
 
 const attachEventListenerToSearchButton = () => {
