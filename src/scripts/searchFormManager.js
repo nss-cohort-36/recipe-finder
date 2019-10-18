@@ -7,7 +7,7 @@ const buildAndAppendSearchForm = () => {
   </section>
   <section class="search-results"></section>
   `
-  console.log(searchForm)
+  // console.log(searchForm)
 
   const containerDiv = document.querySelector("#container")
   containerDiv.innerHTML = searchForm
