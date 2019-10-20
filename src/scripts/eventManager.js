@@ -8,11 +8,16 @@ const handleSearch = event => {
   // Logs string "user input" to the console along with what was typed in the input field.
   console.log("user input", inputField.value)
 
-  // 
+  // Funtion call that takes the user input as an argument.
   searchRecipes(inputField.value)
+
+  // .then waits for the function to return the formatted JSON.
   .then(response => {
     // console.log(response.recipes)
+
+    // Function call takes in the recipes property of response.
     displayRecipeHtml(response.recipes)
+    // Assigns blank string to inputField.value to clear out the search box after all functions have resolved.
     inputField.value = ""
   })
 }
